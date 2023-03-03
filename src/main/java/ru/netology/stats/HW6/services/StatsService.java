@@ -32,7 +32,7 @@ public class StatsService {
 
     public int maxSales(long[] sales) {
 
-        int maxMonth = 0; // номер последнего месяца с максимальными продажами среди просмотренных ранее
+        int maxMonth = 0;
 
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] >= sales[maxMonth]) {
@@ -48,7 +48,7 @@ public class StatsService {
         int minMonth = 0; // номер месяца с минимальными продажами среди просмотренных ранее
 
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] < sales[minMonth]) {
+            if (sales[i] <= sales[minMonth]) {
                 minMonth = i;
             }
         }
